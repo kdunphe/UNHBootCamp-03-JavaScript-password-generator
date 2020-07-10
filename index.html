@@ -1,35 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Password Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+            <br />
+
+
+            <!-- <form>
+            <label for="length">Password Length</label>
+            <input type="range" min="1" max="128" value="8" id="length">
+            <input type="number" min="1" max="128" value="8" id="length">
+
+            <label for="lowercase">Include lowercase letters</label>
+            <input type="checkbox" id="lowercase">
+
+            <label for="uppercase">Include uppercase letters</label>
+            <input type="checkbox" id="uppercase">
+
+            <label for="number">Include numbers</label>
+            <input type="checkbox" id="number">
+
+            <label for="symbol">Include symbols</label>
+            <input type="checkbox" id="symbol">
+        </form> -->
+        
+
+            <form>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="length">Password Length </label>
+                    <input class="form-check-input" type="number" id="length">
+                </div>
+                <br />
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="lowercase">
+                    <label class="form-check-label" for="lowercase">Lowercase</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="uppercase">
+                    <label class="form-check-label" for="uppercase">Uppercase</label></div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="numbers">
+                    <label class="form-check-label" for="numbers">Numbers</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="symbols">
+                    <label class="form-check-label" for="symbols">Symbols</label>
+                </div>
+        </form>
+
+
+
         <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+            <textarea readonly id="password" placeholder="Your Secure Password"
+                aria-label="Generated Password"></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+            <button id="generate" class="btn">Generate Password</button>
         </div>
-      </div>
+    </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
