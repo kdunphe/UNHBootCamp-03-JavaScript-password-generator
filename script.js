@@ -1,8 +1,9 @@
-// Password Arrays
+// Arrays
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const numbers = '0123456789';
 const symbols = '`~!@#$%^&*()[]{}|\:;"_-+=./<>?'; 
+let pswdString = "";
 
 
 // Password Button Criteria
@@ -16,7 +17,34 @@ const sym = document.querySelector('#symbols');
 
 // Generate Random Password
 function generatePassword () {
+
+  // Not working
+  // let length = document.querySelector('#length').value;
+
+  if (lower.checked) {
+    pswdString = pswdString + lowercase;
+
+  }
+
+  if (upper.checked) {
+    pswdString = pswdString + uppercase;
+
+  }
+
+  if (num.checked) {
+    pswdString = pswdString + numbers;
+
+  }
+
+  if (sym.checked) {
+    pswdString = pswdString + symbols;
+
+  }
+
+  console.log(pswdString);
 }
+
+
 
 // If Statements
 
