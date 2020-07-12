@@ -25,37 +25,15 @@ function generatePassword() {
     return "";
   }
 
-  // Source: https://thisinterestsme.com/javascript-detect-checkbox-change/
-  // Source: https://stackoverflow.com/questions/28350387/display-alert-if-checkbox-is-unchecked-and-text-field-is-not-empty
-  // Needs tweaking - alerting regardless of checked/unchecked
-  // if (!checkbox.checked) {
-  //   alert("Please choose at least one character type.");
-  //   return "";
-  // }
-
-  // if (!this.form.checkbox.checked) {
-  //   alert("Please choose at least one character type.");
-  //   return "";
-
-  // }
-
-    // if (checkbox.checked == false) {
-    //   return false;}
-    //   else {
-    //     alert("Please choose at least one character type.");
-    //   }
-
-// Source: https://stackoverflow.com/questions/11234622/simple-javascript-checkbox-validation
-    if (
-      checkbox[0].checked == false &&
-      checkbox[1].checked == false &&
-      checkbox[2].checked == false &&
-      checkbox[3].checked == false
-    ) {
-      alert("Please choose at least one character type.");
-    } 
-
-
+  // Source: https://stackoverflow.com/questions/11234622/simple-javascript-checkbox-validation
+  if (
+    checkbox[0].checked == false &&
+    checkbox[1].checked == false &&
+    checkbox[2].checked == false &&
+    checkbox[3].checked == false
+  ) {
+    alert("Please choose at least one character type.");
+  }
 
   let pswdOption = [];
   let pswdResult = [];
@@ -75,6 +53,7 @@ function generatePassword() {
     pswdOption = pswdOption.concat(symbols);
   }
 
+
   // Create Random Combination of Characters
   // Source: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
   for (i = 0; i < pswdLength; i++) {
@@ -85,13 +64,13 @@ function generatePassword() {
 }
 
 
-
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
