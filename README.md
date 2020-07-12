@@ -15,6 +15,6 @@ _Link to deployed website:_ https://kdunphe.github.io/UNHBootCamp-03-JavaScript-
 
 ![Password-Generator-Screenshot](/assets/Password-Generator-Screenshot.jpg)
 ![Password-Generator-Length-Prompt-Screenshot](/assets/Password-Generator-Length-Prompt-Screenshot.jpg)
-![Password-Generator-Character-Prompt-Screenshot](/assets/Password-Generator-Character-Type-Screenshot.jpg)
+![Password-Generator-Character-Prompt-Screenshot](/assets/Password-Generator-Character-Prompt-Screenshot.jpg)
 ![Password-Generator-Result-Screenshot](/assets/Password-Generator-Result-Screenshot.jpg)
 ![Password-Generator-Mobile-Screenshot](/assets/Password-Generator-Mobile-Screenshot.jpg)
