@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: lightgray;
 }
 
 .wrapper {
@@ -30,6 +30,11 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+h2 {
+    text-align: center;
+    color: lightseagreen;
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,16 +47,21 @@ header {
   padding: 30px 40px;
 }
 
-.card-header::after {
+/* .card-header::after {
   content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
-}
+} */
 
 form {
     text-align: center;
+    font-size: 16px;
+}
+
+form input #id {
+    padding: 50px;
 }
 
 .card-body {
@@ -63,7 +73,6 @@ form {
 }
 
 .card-footer::before {
-  content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
@@ -71,7 +80,6 @@ form {
 }
 
 .card-footer::after {
-  content: " ";
   display: block;
   clear: both;
 }
@@ -116,7 +124,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px solid #c0c7cf;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
@@ -125,7 +133,6 @@ button[disabled] {
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
-    margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
@@ -135,7 +142,11 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
+    .form-check {
+        display: flex;
+        justify-content: center;
+    }
   .btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
