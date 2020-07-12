@@ -3,6 +3,9 @@ const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const numbers = '0123456789';
 const symbols = '`~!@#$%^&*()[]{}|\:;"_-+=./<>?'; 
+let pswdLength;
+let pswdString;
+let pswdCharSet;
 
 
 // Password Button Criteria
@@ -12,7 +15,7 @@ const lower = document.querySelector("#lowercase");
 const upper = document.querySelector("#uppercase");
 const num = document.querySelector("#numbers");
 const sym = document.querySelector("#symbols");
-// Need one for length?
+let length = document.querySelector("#length");
 
 
 // Generate Random Password
@@ -29,20 +32,29 @@ function generatePassword () {
 
   }
 
-  // if (upper.checked) {
-  //   pswdString = pswdString + uppercase;
+  if (upper.checked) {
+    pswdCharSet += uppercase;
 
-  // }
+  }
 
-  // if (num.checked) {
-  //   pswdString = pswdString + numbers;
+  if (num.checked) {
+    pswdCharSet += numbers;
 
-  // }
+  }
 
-  // if (sym.checked) {
-  //   pswdString = pswdString + symbols;
+  if (sym.checked) {
+    pswdCharSet += symbols;
 
-  // }
+  }
+
+  pswdLength = Number(length.value);
+
+  for (let i = 0; i < pswdLength; i++) {
+    pswdString += pswdCharSet.charAt(
+      Math.floor(Math.random() * pswdCharSet.length)
+    );
+
+  }
 
   console.log(pswdCharSet);
 }
